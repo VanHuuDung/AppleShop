@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Material3.Light"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activity.ProductTypeActivity"
+            android:exported="false"
+            android:label="Sản phẩm thể loại"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ForgotPasswordActivity"
+            android:exported="false"
+            android:label="Quên mật khẩu"
+            android:parentActivityName=".Activity.LoginActivity" />
+        <activity
+            android:name=".Activity.ChangePasswordActivity"
+            android:exported="false"
+            android:label="Đổi mật khẩu"
+            android:parentActivityName=".Activity.PersonalInfoActivity" />
+        <activity
+            android:name=".Activity.PersonalInfoActivity"
+            android:exported="false"
+            android:label="Chỉnh sửa thông tin cá nhân" />
+        <activity
+            android:name=".Activity.RegisterActivity"
+            android:exported="false"
+            android:label="Đăng ký"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".Activity.Product_detailsActivity"
+            android:exported="false"
+            android:label="Chi tiết sản phẩm"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:exported="false"
+            android:label="Đăng nhập"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".Activity.UpdateProductActivity"
+            android:exported="false"
+            android:parentActivityName=".Activity.AdminProductDetailActivity"
+            android:theme="@style/Theme.StoreDataRealtime" />
+        <activity
+            android:name=".Activity.InsertProductActivity"
+            android:exported="false"
+            android:label="Thêm sản phẩm"
+            android:parentActivityName=".Activity.AdminProductListActivity"
+            android:theme="@style/Theme.StoreDataRealtime" />
+        <activity
+            android:name=".Activity.AdminProductDetailActivity"
+            android:exported="false"
+            android:label="Chi tiết sản phẩm"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Activity.AdminProductListActivity"
+            android:theme="@style/Theme.StoreDataRealtime" />
+        <activity
+            android:name=".Activity.AdminProductListActivity"
+            android:exported="false"
+            android:label="Danh sách sản phẩm"
+            android:theme="@style/Theme.StoreDataRealtime" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Material3.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
